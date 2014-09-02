@@ -1,6 +1,5 @@
 package utfpr.ct.dainf.if62c.avaliacao;
 
-import java.util.Date;
 import java.util.TimerTask;
 
 /**
@@ -18,10 +17,7 @@ public class Aviso extends TimerTask{
 
     @Override
     public void run() {
-       Date currentTime = new Date();
-       currentTime.setTime(System.currentTimeMillis());
-       System.out.println("Aviso " + compromisso.toString() + currentTime);
-       
+       System.out.println("Aviso " + compromisso.toString());       
     }
         
 }

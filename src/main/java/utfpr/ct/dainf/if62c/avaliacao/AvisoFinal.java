@@ -12,7 +12,7 @@ public class AvisoFinal extends Aviso {
     }
  @Override
     public void run() {
-        System.out.println("Aviso Final!" + compromisso.toString());
+        System.out.println("<<<<Aviso Final!>>>>" + compromisso.toString());
         
         for(Aviso a : compromisso.getAvisos()){
             a.cancel();
