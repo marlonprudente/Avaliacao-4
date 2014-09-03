@@ -1,11 +1,13 @@
 package utfpr.ct.dainf.if62c.avaliacao;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.TimerTask;
 
 /**
  * IF62C Fundamentos de Programação 2
  * Avaliação parcial.
- * @author 
+ * @author Marlon Mateus Prudente de Oliveira  marlonmateuspr@gmail.com
  */
 public class Aviso extends TimerTask{
     
@@ -17,7 +19,11 @@ public class Aviso extends TimerTask{
 
     @Override
     public void run() {
-       System.out.println("Aviso " + compromisso.toString());       
+        Date data = new Date();
+        data.setTime(compromisso.getData().getTime() - System.currentTimeMillis());
+        
+        SimpleDateFormat spd = new SimpleDateFormat("s");
+        System.out.println(compromisso.getDescricao() + " começa em " + spd.format(data) + "s");
     }
         
 }
